@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos e momentos da E.E. Dom Lúcio Antunes">
+    <title>Galeria - E.E. Dom Lúcio Antunes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            opacity: 0.8;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .gallery-category {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+
+        .gallery-category h3 {
+            margin-bottom: 30px;
+            color: #667eea;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>E.E. Dom Lúcio Antunes</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="professores.html">Professores</a></li>
+                <li><a href="galeria.html" class="active">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="margin-top: 60px;">
+        <div class="hero-content">
+            <h1>Galeria de Fotos</h1>
+            <p>Momentos especiais da nossa comunidade escolar</p>
+        </div>
+    </section>
+
+    <!-- Galeria - Eventos -->
+    <section class="featured-courses">
+        <div class="container">
+            <div class="gallery-category">
+                <h3>🎉 Eventos e Festas</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Festa Junina 2024</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Formatura Turma 2024</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Recepção de Novos Alunos</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Dia do Estudante</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Olimpíada Interna</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Show de Talentos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>⚽ Atividades Esportivas</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Campeonato de Futebol</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-volleyball"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Torneio de Vôlei</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-basketball"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Basquete Escolar</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-person-running"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Gincana Esportiva</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Aula de Educação Física</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-person"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Atividades na Quadra</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🎨 Atividades Culturais</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Aulas de Artes Plásticas</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Apresentação Musical</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Peça de Teatro</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Sarau Literário</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Mostra de Trabalhos Artísticos</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Sessão de Cinema</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🔬 Atividades Científicas</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Aulas no Laboratório</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Experiências de Biologia</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Aulas de Química</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Projetos de Física</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-computer"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Aulas de Informática</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Mostra Científica</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🏫 Infraestrutura e Espaços</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Fachada da Escola</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Sala de Leitura</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Laboratório de Informática</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Salas de Aula</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Refeitório</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Pátio Coberto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>E.E. Dom Lúcio Antunes</h4>
+                    <p>Educação de qualidade para construir o futuro</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (18) 3871-1328</p>
+                    <p>📧 e031159a@educacao.sp.gov.br</p>
+                    <p>📍 Avenida Pege Raposo Lopes, 612 - Panorama, SP</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>📅 Segunda a Sexta-feira</p>
+                    <p>⏰ 7h às 23h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 E.E. Dom Lúcio Antunes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
