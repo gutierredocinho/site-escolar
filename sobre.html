@@ -3,10 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a história e missão da Escola Moderna">
-    <title>Sobre - Escola Moderna</title>
+    <meta name="description" content="Conheça a história e missão da E.E. Dom Lúcio Antunes">
+    <title>Sobre - E.E. Dom Lúcio Antunes</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 80px 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .about-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .history-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-year {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            height: fit-content;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-content h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: #666;
+            margin: 0;
+        }
+
+        .institutional-info {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+
+        .info-card h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .differential-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .differential-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .differential-item i {
+            font-size: 2rem;
+            color: #667eea;
+            flex-shrink: 0;
+        }
+
+        .differential-item h4 {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .differential-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-year {
+                position: static;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navegação -->
@@ -14,7 +169,7 @@
         <div class="container">
             <div class="nav-brand">
                 <i class="fas fa-graduation-cap"></i>
-                <span>Escola Moderna</span>
+                <span>E.E. Dom Lúcio Antunes</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Início</a></li>
@@ -36,176 +191,168 @@
     <section class="hero" style="margin-top: 60px;">
         <div class="hero-content">
             <h1>Sobre Nós</h1>
-            <p>Conheça nossa história e valores</p>
+            <p>Conheça a história e valores da E.E. Dom Lúcio Antunes</p>
         </div>
     </section>
 
     <!-- Missão, Visão, Valores -->
     <section class="about-section">
         <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Missão, Visão e Valores</h2>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="about-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Nossa Missão</h3>
-                    <p>Proporcionar educação de qualidade que desenvolva o potencial integral de cada aluno, formando cidadãos críticos, éticos e preparados para os desafios do mundo moderno.</p>
+                    <p>Proporcionar educação de qualidade que desenvolva o potencial integral de cada aluno, formando cidadãos críticos, éticos e preparados para os desafios do mundo moderno, com responsabilidade social e inclusão.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>Nossa Visão</h3>
-                    <p>Ser reconhecida como uma instituição de excelência em educação, referência em inovação pedagógica e formação de líderes transformadores da sociedade.</p>
+                    <p>Ser reconhecida como instituição de excelência em educação, referência em inovação pedagógica e formação de líderes transformadores da comunidade de Panorama e região, contribuindo para um futuro mais justo e sustentável.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Nossos Valores</h3>
-                    <p>Excelência, integridade, respeito, inclusão, inovação e comprometimento com o desenvolvimento sustentável e responsabilidade social.</p>
+                    <p>Excelência educacional, inclusão, integridade, respeito à diversidade, inovação, comprometimento com desenvolvimento humano e responsabilidade social e ambiental.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações Institucionais -->
+    <section class="institutional-info">
+        <div class="container">
+            <h2>Informações Institucionais</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>📍 Localização</h4>
+                    <p><strong>Endereço:</strong> Avenida Pege Raposo Lopes, 612 - Centro<br>
+                    <strong>Cidade:</strong> Panorama - SP<br>
+                    <strong>CEP:</strong> 17980-000</p>
+                </div>
+                <div class="info-card">
+                    <h4>📞 Contato</h4>
+                    <p><strong>Telefone:</strong> (18) 3871-1328<br>
+                    <strong>E-mail:</strong> e031159a@educacao.sp.gov.br</p>
+                </div>
+                <div class="info-card">
+                    <h4>⏰ Horário de Funcionamento</h4>
+                    <p><strong>Dias:</strong> Segunda a Sexta-feira<br>
+                    <strong>Horário:</strong> 7h às 23h<br>
+                    <strong>Fechado:</strong> Sábados e Domingos</p>
+                </div>
+                <div class="info-card">
+                    <h4>🎓 Níveis Oferecidos</h4>
+                    <p><strong>Ensino Fundamental</strong> (Anos Finais - 6º ao 9º)<br>
+                    <strong>Ensino Médio</strong> (1º ao 3º)<br>
+                    <strong>EJA</strong> (Educação para Jovens e Adultos)</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- História -->
-    <section class="history-section">
+    <section class="featured-courses">
         <div class="container">
             <h2>Nossa História</h2>
             <div class="history-timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">1994</div>
                     <div class="timeline-content">
-                        <h4>Fundação</h4>
-                        <p>A Escola Moderna foi fundada com o objetivo de ofertar educação de qualidade para a comunidade local.</p>
+                        <h4>🎓 Fundação</h4>
+                        <p>A Escola Estadual Dom Lúcio Antunes é fundada com o objetivo de ofertar educação de qualidade para a comunidade de Panorama e região. Inicia suas atividades com turmas de Ensino Fundamental.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2000</div>
                     <div class="timeline-content">
-                        <h4>Expansão</h4>
-                        <p>Ampliação das instalações e criação do Ensino Médio, consolidando nossa presença na região.</p>
+                        <h4>📚 Expansão</h4>
+                        <p>Ampliação das instalações e criação do Ensino Médio, consolidando nossa presença como instituição de referência na região. Abertura da primeira turma de Ensino Médio.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2010</div>
                     <div class="timeline-content">
-                        <h4>Modernização</h4>
-                        <p>Implementação de tecnologia em sala de aula e laboratórios de informática e ciências.</p>
+                        <h4>💻 Modernização</h4>
+                        <p>Implementação de tecnologia em sala de aula, criação de laboratórios de informática e ciências. Investimento em infraestrutura e capacitação de professores.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h4>🌍 Sustentabilidade</h4>
+                        <p>Implementação de projetos voltados à sustentabilidade ambiental. Criação de horta escolar e programas de conscientização ecológica.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2020</div>
                     <div class="timeline-content">
-                        <h4>Educação Digital</h4>
-                        <p>Adaptação para ensino híbrido e criação de plataformas digitais de aprendizagem.</p>
+                        <h4>📱 Educação Digital</h4>
+                        <p>Adaptação para ensino híbrido durante a pandemia. Criação de plataformas digitais de aprendizagem e capacitação de professores em ferramentas tecnológicas.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2024</div>
                     <div class="timeline-content">
-                        <h4>Inovação Contínua</h4>
-                        <p>Desenvolvimento de programas de sustentabilidade e inteligência artificial na educação.</p>
+                        <h4>🚀 Inovação Contínua</h4>
+                        <p>Desenvolvimento de programas de inteligência artificial na educação, práticas de educação inclusiva e atendimento especializado. Consolidação como escola de excelência.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Infraestrutura -->
-    <section class="infrastructure-section">
+    <!-- Diferenciais -->
+    <section class="highlights">
         <div class="container">
-            <h2>Nossas Instalações</h2>
-            <div class="infrastructure-grid">
-                <div class="infra-item">
-                    <i class="fas fa-book"></i>
-                    <h4>Biblioteca Moderna</h4>
-                    <p>Acervo de mais de 5000 livros com espaço aconchegante para estudos</p>
-                </div>
-                <div class="infra-item">
-                    <i class="fas fa-flask"></i>
-                    <h4>Laboratórios</h4>
-                    <p>Laboratórios de Química, Física e Biologia com equipamentos modernos</p>
-                </div>
-                <div class="infra-item">
-                    <i class="fas fa-laptop"></i>
-                    <h4>Sala Digital</h4>
-                    <p>Sala com computadores de última geração e acesso à internet de alta velocidade</p>
-                </div>
-                <div class="infra-item">
-                    <i class="fas fa-dumbbell"></i>
-                    <h4>Quadra Poliesportiva</h4>
-                    <p>Espaço para práticas de educação física e atividades esportivas</p>
-                </div>
-                <div class="infra-item">
-                    <i class="fas fa-utensils"></i>
-                    <h4>Refeitório</h4>
-                    <p>Espaço amplo com menu variado e nutritivo para os alunos</p>
-                </div>
-                <div class="infra-item">
-                    <i class="fas fa-music"></i>
-                    <h4>Sala de Arte e Música</h4>
-                    <p>Ambiente para desenvolvimento de criatividade e expressão artística</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2>Depoimentos</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"A Escola Moderna me proporcionou uma educação excepcional. Os professores são dedicados e a infraestrutura é de primeira qualidade."</p>
-                    <div class="testimonial-author">
-                        <img src="https://via.placeholder.com/50" alt="Ana Silva">
-                        <div>
-                            <h4>Ana Silva</h4>
-                            <p>Ex-aluna - USP</p>
-                        </div>
+            <h2>Nossos Diferenciais</h2>
+            <div class="differential-list">
+                <div class="differential-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Atendimento Inclusivo</h4>
+                        <p>Acessibilidade completa com rampas, corrimãos e banheiros adaptados para todos os alunos</p>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Meu filho aprendeu muito mais do que o esperado. A escola promove não apenas conhecimento, mas valores importantes para a vida."</p>
-                    <div class="testimonial-author">
-                        <img src="https://via.placeholder.com/50" alt="Carlos Santos">
-                        <div>
-                            <h4>Carlos Santos</h4>
-                            <p>Pai de aluno</p>
-                        </div>
+                <div class="differential-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Tecnologia Educacional</h4>
+                        <p>Laboratório de informática moderno com internet de alta velocidade e plataformas digitais</p>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="differential-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Alimentação de Qualidade</h4>
+                        <p>Refeições nutritivas fornecidas aos alunos durante o período escolar</p>
                     </div>
-                    <p>"Trabalhar na Escola Moderna é gratificante. Tenho liberdade para inovar e a instituição investe em nosso desenvolvimento profissional."</p>
-                    <div class="testimonial-author">
-                        <img src="https://via.placeholder.com/50" alt="Maria Oliveira">
-                        <div>
-                            <h4>Maria Oliveira</h4>
-                            <p>Professora de Português</p>
-                        </div>
+                </div>
+                <div class="differential-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Espaços Modernos</h4>
+                        <p>Sala de leitura, quadra esportiva, pátio coberto e ambientes para atividades</p>
+                    </div>
+                </div>
+                <div class="differential-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Sustentabilidade</h4>
+                        <p>Práticas educacionais focadas em desenvolvimento sustentável e responsabilidade ambiental</p>
+                    </div>
+                </div>
+                <div class="differential-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Equipe Dedicada</h4>
+                        <p>Professores qualificados e comprometidos com a excelência no ensino</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +364,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Escola Moderna</h4>
+                    <h4>E.E. Dom Lúcio Antunes</h4>
                     <p>Educação de qualidade para construir o futuro</p>
                 </div>
                 <div class="footer-section">
@@ -230,22 +377,18 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contato</h4>
-                    <p>📞 (11) 3000-0000</p>
-                    <p>📧 info@escolamoderna.com</p>
-                    <p>📍 São Paulo, SP</p>
+                    <p>📞 (18) 3871-1328</p>
+                    <p>📧 e031159a@educacao.sp.gov.br</p>
+                    <p>📍 Panorama, SP</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <h4>Horário de Funcionamento</h4>
+                    <p>📅 Segunda a Sexta-feira</p>
+                    <p>⏰ 7h às 23h</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Escola Moderna. Todos os direitos reservados.</p>
+                <p>&copy; 2024 E.E. Dom Lúcio Antunes. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
